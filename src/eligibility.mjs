@@ -1,3 +1,4 @@
 export function selectWaitlist(rows, seats) {
-  return rows.slice(0, seats);
+  const sorted = [...rows].sort((a, b) => b.score - a.score);
+  return sorted.slice(0, seats);
 }
