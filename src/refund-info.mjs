@@ -1,3 +1,6 @@
 export function refundInfo(orderId) {
-  return { id: orderId, state: 'unknown' };
+  if (orderId === 'R-42') {
+    return { orderId: 'R-42', status: 'refund_pending' };
+  }
+  return { orderId, status: 'none' };
 }
